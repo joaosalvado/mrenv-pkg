@@ -13,7 +13,7 @@ RUN apt-get update \
 	gcc-9 \
 	g++-9 \
 	cmake \
-	libeigen3-dev \
+	#libeigen3-dev \
 	wget \
 	unzip \
   libopencv-dev  \
@@ -61,11 +61,11 @@ RUN apt-get update \
     #make install && \ 
     #ldconfig
 
-COPY mrenv /mrenv
+COPY mr_env /mr_env
 
-WORKDIR /mrenv/build
+WORKDIR /mr_env/build
 RUN cmake .. \
 	&& make
 
-WORKDIR /mrenv/build/src
-CMD ["/bin/sh", "mrenv_exe"]
+#WORKDIR /mr_env/build/src
+#CMD ["/bin/sh", "mrenv_exe"]
