@@ -67,5 +67,6 @@ WORKDIR /mr_env/build
 RUN cmake .. \
 	&& make
 
-#WORKDIR /mr_env/build/src
+WORKDIR /mr_env/build/src
 #CMD ["/bin/sh", "mrenv_exe"]
+#RUN ./mrenv_exe
