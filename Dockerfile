@@ -10,6 +10,8 @@ LABEL version="1.0" \
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
   && apt-get install -y build-essential \
+  git \
+  openssh-client \
 	gcc-9 \
 	g++-9 \
 	cmake \
@@ -39,6 +41,16 @@ RUN apt-get update \
 #    zlib1g-dev \
   && apt-get clean
 
+COPY thirdparty/yaml-cpp /yaml-cpp
+
+RUN cd yaml-cpp \
+&& mkdir build \
+&& cd build \
+&& cmake -DYAML_BUILD_SHARED_LIBS=ON .. \
+&& make \
+&& make install
+
+
 
 # Install Open CV - Warning, this takes absolutely forever
 #RUN mkdir -p ~/opencv cd ~/opencv && \
@@ -61,12 +73,12 @@ RUN apt-get update \
     #make install && \ 
     #ldconfig
 
-COPY mr_env /mr_env
+COPY mrenv /mrenv
 
-WORKDIR /mr_env/build
+WORKDIR /mrenv/build
 RUN cmake .. \
 	&& make
 
-WORKDIR /mr_env/build/src
+WORKDIR /mrenv/build/src
 #CMD ["/bin/sh", "mrenv_exe"]
 #RUN ./mrenv_exe
