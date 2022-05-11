@@ -1,4 +1,4 @@
-Simple Environment Tesselator
+Simple rectangular tesselation of black and white image
 
 * Method Overview
 This package is able to tesselate grayscale images with right angle (90 degrees) rectangles.
