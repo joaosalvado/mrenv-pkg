@@ -1,4 +1,4 @@
-#TITLE: MRENV-pkg Simple Environment Tesselator
+Simple Environment Tesselator
 
 * Method Overview
 This package is able to tesselate grayscale images with right angle (90 degrees) rectangles.
@@ -15,3 +15,20 @@ git clone git@github.com:joaosalvado/mr_env.git mrenv
 cd thirdparty
 git clone git@github.com:jbeder/yaml-cpp.git
 #+end_src
+* Build
+#+begin_src shell
+sudo docker build -t mrenv .
+#+end_src
+* Run Docker Container
+This extra running options are required to show opencv images.
+#+begin_src shell
+docker run -it --rm -e DISPLAY=$DISPLAY \
+   -v /tmp/.X11-unix:/tmp/.X11-unix \
+   --network=host \
+   --volume=$(pwd) \
+   --user=$(id -u $USER) \
+   --workdir=/mrenv/build/src mrenv
+#+end_src
+* Examples
+/(in progress)/
+_insert table of images_
