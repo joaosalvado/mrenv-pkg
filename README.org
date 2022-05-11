@@ -1,0 +1,17 @@
+#TITLE: MRENV-pkg Simple Environment Tesselator
+
+* Method Overview
+This package is able to tesselate grayscale images with right angle (90 degrees) rectangles.
+Grayscale images have to come with a yaml file describing the meter to pixel resolution.
+For instance, check the example maps descrived by the pair of files mrenv/maps/*.yaml and respective mrenv/maps/*.png.
+* Note
+This repo packages [[https://github.com/joaosalvado/mr_env][mrenv]] on a docker container
+* Dependencies
+- Docker
+- Ubuntu
+* Installation
+#+begin_src shell
+git clone git@github.com:joaosalvado/mr_env.git mrenv
+cd thirdparty
+git clone git@github.com:jbeder/yaml-cpp.git
+#+end_src
