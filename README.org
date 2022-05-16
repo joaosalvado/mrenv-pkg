@@ -14,6 +14,7 @@ This repo packages [[https://github.com/joaosalvado/mr_env][mrenv]] on a docker 
 git clone git@github.com:joaosalvado/mr_env.git mrenv
 cd thirdparty
 git clone git@github.com:jbeder/yaml-cpp.git
+cd ..
 #+end_src
 * Build
 #+begin_src shell
@@ -28,6 +29,34 @@ docker run -it --rm -e DISPLAY=$DISPLAY \
    --volume=$(pwd) \
    --user=$(id -u $USER) \
    --workdir=/mrenv/build/src mrenv
+#+end_src
+* Executable
+A simple tesselation can be constructed as seen in the executable source code below.
+One is required to define the footprint of minimal rectangle and an image to tesselate.
+Check folder maps/ on how to provide a .yaml and .png file to define a map
+#+begin_src cpp
+#include "../include/mrenv/Tesselation.h"
+
+int main()
+{
+        // 0 - Parameters
+        // 0.1 - Footprint
+        int length = 1.5;
+        int width = 1;
+        // 0.2 - Map files that is in the maps/ folder
+        std::string map_file = "map1.yaml";
+
+        // 1 - Compute the polygon tesselaiton
+        mrenv::Tesselation tessel;
+        tessel.inputScenario(map_file, length, width);
+        tessel.coverRectangles();
+        tessel.plotBestCover();
+
+        // 2 - Retrive a list of Rectangles
+        auto rects  = tessel.getRectangles();
+
+        return 0;
+}
 #+end_src
 * Examples
 /(in progress)/
