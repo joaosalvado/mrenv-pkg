@@ -64,8 +64,8 @@ _insert table of images_
 
 [[images/map1.png]]
 
-| [[img:images/map1.png]] |   |
-|                     |   |
+| [[images/map1.png]] |   |
+|                 |   |
 
 
 * License
