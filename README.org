@@ -61,7 +61,7 @@ int main()
 * Examples
 /(in progress)/
 _insert table of images_
-| [[ https://github.com/joaosalvado/mrenv-pkg/tree/main/images/map1.png]] | #+html: <p align="center"><img src="" />https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png</p> |
+| [[ https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png]] | #+html: <p align="center"><img src="" />https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png</p> |
 *
 * License
 <mrenv-pkg simple rectangular tesselation of grayslace images>
