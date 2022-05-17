@@ -10,7 +10,7 @@ This is repeated several times and those rectangles are stored and considered as
 This repo packages [[https://github.com/joaosalvado/mr_env][mrenv]] on a docker container
 * Dependencies
 - Docker
-- Ubunt fsu: [[https://hub.docker.com/_/ubuntu/][ubuntu_docker_image]]
+- Ubuntu: [[https://hub.docker.com/_/ubuntu/][ubuntu_docker_image]]
 * Installation
 #+begin_src shell
 git clone git@github.com:joaosalvado/mr_env.git mrenv
