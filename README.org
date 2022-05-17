@@ -61,6 +61,8 @@ int main()
 * Examples
 /(in progress)/
 _insert table of images_
+| [[file:images/map1.png][map1]] | 2 |
+|    0 | 1 |
 * Licence
 <mrenv-pkg simple rectangular tesselation of grayslace images>
 Copyright (C) 2022 Joao Salvado
