@@ -61,6 +61,10 @@ int main()
 * Examples
 /(in progress)/
 _insert table of images_
+
+[[img:https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png][map1]]
+
+
 | [[ https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png]] | #+html: <p align="center"><img src="" />https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png</p> |
 *
 * License
