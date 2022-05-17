@@ -59,13 +59,8 @@ int main()
 }
 #+end_src
 * Examples
-/(in progress)/
-_insert table of images_
-
-[[images/map1.png]]
-
-| [[images/map1.png]] |   |
-|                 |   |
+| [[images/map1.png]]           | [[images/basement.png]]       |
+| [[ images/map-corridors.png]] | [[images/map-partial-vi.png]] |
 
 
 * License
