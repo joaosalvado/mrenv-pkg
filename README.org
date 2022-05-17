@@ -4,11 +4,13 @@ Simple rectangular tesselation of black and white image
 This package is able to tesselate grayscale images with right angle (90 degrees) rectangles.
 Grayscale images have to come with a yaml file describing the meter to pixel resolution.
 For instance, check the example maps descrived by the pair of files mrenv/maps/*.yaml and respective mrenv/maps/*.png.
+This method samples a point on the image, then expands a rectangle around this point until it intersects with an obstacles.
+This is repeated several times and those rectangles are stored and considered as obstacles on the next iterations.
 * Note
 This repo packages [[https://github.com/joaosalvado/mr_env][mrenv]] on a docker container
 * Dependencies
 - Docker
-- Ubuntu
+- Ubunt fsu: [[https://hub.docker.com/_/ubuntu/][ubuntu_docker_image]]
 * Installation
 #+begin_src shell
 git clone git@github.com:joaosalvado/mr_env.git mrenv
@@ -59,6 +61,8 @@ int main()
 }
 #+end_src
 * Examples
+Green rectangle in the top left corner is the minimal size rectangle accepted.
+Note that the tesselation does not cover the entire white space. The method randomly samples and expands rectangles until they intersect with obstacles.
 | [[images/map1.png]]          | [[images/basement.png]]       |
 | [[images/map-corridors.png]] | [[images/map-partial-vi.png]] |
 
