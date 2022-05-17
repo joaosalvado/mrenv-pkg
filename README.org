@@ -63,12 +63,11 @@ int main()
 _insert table of images_
 
 [[images/map1.png]]
-#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
-https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png
+
+| [[img:images/map1.png]] |   |
+|                     |   |
 
 
-| [[ https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png]] | #+html: <p align="center"><img src="" />https://github.com/joaosalvado/mrenv-pkg/blob/main/images/map1.png</p> |
-*
 * License
 <mrenv-pkg simple rectangular tesselation of grayslace images>
 Copyright (C) 2022 Joao Salvado
