@@ -59,8 +59,8 @@ int main()
 }
 #+end_src
 * Examples
-| [[images/map1.png]]           | [[images/basement.png]]       |
-| [[ images/map-corridors.png]] | [[images/map-partial-vi.png]] |
+| [[images/map1.png]]          | [[images/basement.png]]       |
+| [[images/map-corridors.png]] | [[images/map-partial-vi.png]] |
 
 
 * License
